@@ -5,15 +5,16 @@ const connect = function () {
     host: 'localhost',
     port: 50541,
   });
-
+  conn.setEncoding('utf8')
   // interpret incoming data as text
   conn.setEncoding("utf8");
   conn.on("connect", () => {
     console.log(`welcome to snek`)
   })
-  conn.on("data", () => {
-    conn.write(`Name: JTC`);
-  });
+  process.stdin.on('data', function(message){
+    conn.write(message)
+  })
+
 
   return conn;
 };
