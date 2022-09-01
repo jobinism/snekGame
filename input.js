@@ -20,6 +20,14 @@ const handleUserInput = function(key) {
     connection.write("Move: down")
   } else if (key === 'd') {
     connection.write("Move: right")
+  } else if (key === 'g') {
+    connection.write("Say: Too slow ")
+  } else if (key === 't') {
+    connection.write("Say: What's up")
+  } else if (key === 'f') {
+    connection.write("Say: Nice try")
+  } else if (key === 'h') {
+    connection.write("Say: I win")
   }
 }
 
